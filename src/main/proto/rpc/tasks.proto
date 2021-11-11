@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package rpc;
+
+import "common/messages.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.lepsistemas.tasks.proto.rpc.tasks";
+option objc_class_prefix = "TSK";
+
+service Tasks {
+  rpc Create (CreateTaskRequest) returns (CreateTaskResponse);
+}
+
+message CreateTaskRequest {
+  string name = 1;
+}
+message CreateTaskResponse {
+  common.Task task = 1;
+}
