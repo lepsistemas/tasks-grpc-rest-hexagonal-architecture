@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package common;
+
+option java_multiple_files = true;
+option java_package = "br.com.lepsistemas.tasks.proto.common.messages";
+option objc_class_prefix = "LST";
+
+message Task {
+  string id = 1;
+  string name = 2;
+}
